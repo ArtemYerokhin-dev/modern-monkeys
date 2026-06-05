@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Monkeys Barbershop</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow Condensed',sans-serif;background:#0D0D0D;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:60px;padding:40px}
+.logo{font-size:clamp(40px,8vw,80px);font-weight:900;letter-spacing:.12em;text-transform:uppercase;text-align:center}
+.sub{font-size:14px;letter-spacing:.2em;color:#555;text-transform:uppercase;text-align:center;margin-top:-40px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:3px;width:100%;max-width:800px}
+.card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;text-decoration:none;gap:16px;transition:opacity .2s}
+.card:hover{opacity:.85}
+.card-black{background:#fff}
+.card-yellow{background:#D4900A}
+.card-label{font-size:clamp(28px,5vw,52px);font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.card-black .card-label{color:#0D0D0D}
+.card-yellow .card-label{color:#0D0D0D}
+.card-hint{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
+.card-black .card-hint{color:#0D0D0D}
+.card-yellow .card-hint{color:#0D0D0D}
+@media(max-width:500px){.cards{grid-template-columns:1fr}.card{padding:48px 28px}}
+</style>
+</head>
+<body>
+<div class="logo">Modern<br>Monkeys</div>
+<div class="sub">Barbershop — Choose Design</div>
+<div class="cards">
+  <a href="black/index.html" class="card card-black">
+    <div class="card-label">Black</div>
+    <div class="card-hint">Dark Edition</div>
+  </a>
+  <a href="yellow/index.html" class="card card-yellow">
+    <div class="card-label">Yellow</div>
+    <div class="card-hint">Original</div>
+  </a>
+</div>
+</body>
+</html>
