@@ -623,9 +623,7 @@ footer{background:var(--bg2);border-top:1px solid rgba(255,255,255,.06);padding:
             <div><label class="f-label">Vorname *</label><input class="f-input" id="fN" type="text" placeholder="Dein Vorname"></div>
             <div><label class="f-label">Nachname *</label><input class="f-input" id="fL" type="text" placeholder="Dein Nachname"></div>
           </div>
-          <label class="f-label">E-Mail *</label>
-          <input class="f-input" id="fE" type="email" placeholder="deine@email.de">
-          <label class="f-label">Telefon</label>
+          <label class="f-label">Telefon *</label>
           <input class="f-input" id="fP" type="tel" placeholder="+49 ...">
           <label class="f-label">Location *</label>
           <select class="f-select" id="fLo">
@@ -870,10 +868,10 @@ document.querySelectorAll('.slot:not(.taken)').forEach(s=>{
 // BOOKING
 function submitBook(){
   const n=document.getElementById('fN').value.trim();
-  const e=document.getElementById('fE').value.trim();
+  const p=document.getElementById('fP').value.trim();
   const lo=document.getElementById('fLo').value;
   const sv=document.getElementById('fSv').value;
-  if(!n||!e||!lo||!sv||!sd||!st){alert('Bitte fülle alle Pflichtfelder aus und wähle Datum sowie Uhrzeit.');return;}
+  if(!n||!p||!lo||!sv||!sd||!st){alert('Bitte fülle alle Pflichtfelder aus und wähle Datum sowie Uhrzeit.');return;}
   document.getElementById('bkForm').style.display='none';
   document.getElementById('bkOk').classList.add('show');
   document.getElementById('booking').scrollIntoView({behavior:'smooth'});
@@ -881,7 +879,7 @@ function submitBook(){
 function resetBook(){
   document.getElementById('bkForm').style.display='block';
   document.getElementById('bkOk').classList.remove('show');
-  ['fN','fL','fE','fP','fNo'].forEach(id=>document.getElementById(id).value='');
+  ['fN','fL','fP','fNo'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('fLo').value='';document.getElementById('fSv').value='';document.getElementById('fBr').value='';
   document.querySelectorAll('.slot').forEach(s=>s.classList.remove('selected'));
   sd=null;st=null;rCal();
